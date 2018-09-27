@@ -8,3 +8,5 @@ cd clj-gdg
 lein figwheel dev
 
 ```
+
+E vai no navigador ao http://localhost:3450/cards.html#!/present.core
