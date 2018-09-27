@@ -22,7 +22,7 @@
 (defcard
   "# Clojure
 
-## O que que 'e?
+## O que é Clojure?
 
 * Lisp
 * \"Clean Slate\"
@@ -52,7 +52,7 @@
 * Impraticável (mas o Clojure solucionar este ultima)")
 
 (defcard
-  "# Programacao Funcional
+  "# Programação Funcional
 
 Funções são \"cidadãos de primeira classe\"
 
@@ -117,7 +117,7 @@ Funções são \"cidadãos de primeira classe\"
   (let [f (partial + 1)
         g (fn [x] (* x x))
         h (comp f g)
-        tx (comp (map g) (map f) (filter even?))]
+        tx (comp (map f) (map g) (filter even?))]
     (sab/html [:div
                [:div (str (f 3))]
                [:div (str (map h (range 10)))]
@@ -140,7 +140,7 @@ Funções são \"cidadãos de primeira classe\"
 
 ### EDN
 
-Dar pra combinar em estruturas de dados \"literais\" complexos.
+Da pra combinar em estruturas de dados \"literais\" complexos.
 
 A filosofia de Clojure : melhor 100 funcoes operando um estrutura de dados do que 10 estruturas de dados cada um com 10 funcoes operando em lo.
 
@@ -308,19 +308,7 @@ Eg. hiccup
      {:dangerouslySetInnerHTML {:__html (make-svg 400 400
                                                   p)}}]])))
 
-(defcard
-  "## \"Clean Slate\"
 
-* EDN
-* Dados Imutaveis
-* Dados Preguicosas
-
-## Bom Gosto
-
-* Interfaces / APIs gerais
-* Ferramentas : (Figwheel, devcards)
-
-")
 
 
 
@@ -340,7 +328,7 @@ Exemplo de interatividade em React (com Reagent)
                 (for [item @orc ]
                   (if (< 0 item)
                     [:tr [:td item] [:td]]
-                    [:tr [:td] [:td [:span {:style {:color "#ff000"} } (- 0 item)]] ])) ]]
+                    [:tr [:td] [:td [:span {:style {:color "red"}} (- 0 item)]] ])) ]]
        [:div "Som : " som]
        [:div
         [:input {:type "text"
@@ -355,10 +343,7 @@ Exemplo de interatividade em React (com Reagent)
        ] )))
  )
 
-(defcard
-  "## exemplo"
-  (sab/html [:div
-             [:h3 "Criado em codigo"]]))
+
 
 
 
