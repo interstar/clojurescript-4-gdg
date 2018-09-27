@@ -9,4 +9,4 @@ lein figwheel devcards
 
 ```
 
-E vai no navigador ao http://localhost:3450/cards.html#!/clojurescript-4-gdg.core
+E vai no navigador ao http://localhost:3449/cards.html#!/clojurescript-4-gdg.core
