@@ -22,7 +22,7 @@
                  #_[reagent "0.6.0"]
                  ]
   :jvm-opts ["--add-modules" "java.xml.bind"]
-  :plugins [[lein-figwheel "0.5.9"]
+  :plugins [[lein-figwheel "0.5.10-SNAPSHOT"]
             [lein-cljsbuild "1.1.5" :exclusions [org.clojure/clojure]]]
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled"
@@ -44,20 +44,7 @@
                                     :output-to  "resources/public/js/compiled/clojurescript_4_gdg_devcards.js"
                                     :output-dir "resources/public/js/compiled/devcards_out"
                                     :source-map-timestamp true }}
-                       {:id "dev"
-                        :source-paths ["src"]
-                        :figwheel true
-                        :compiler {:main       "clojurescript-4-gdg.core"
-                                   :asset-path "js/compiled/out"
-                                   :output-to  "resources/public/js/compiled/clojurescript_4_gdg.js"
-                                   :output-dir "resources/public/js/compiled/out"
-                                   :source-map-timestamp true }}
-                       {:id "prod"
-                        :source-paths ["src"]
-                        :compiler {:main       "clojurescript-4-gdg.core"
-                                   :asset-path "js/compiled/out"
-                                   :output-to  "resources/public/js/compiled/clojurescript_4_gdg.js"
-                                   :optimizations :advanced}}]}
+]}
 
   :figwheel { :css-dirs ["resources/public/css"] }
 
